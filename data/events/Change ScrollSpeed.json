@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "Speed",
+            "type": "String",
+            "defaultValue": ""
+        },
+        {
+            "name": "duration/time to change",
+            "type": "String",
+            "defaultValue": "0.001"
+        }
+    ]
+}

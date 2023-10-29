@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/PibbyApocalypse/images/school/" name="school-gum" zoom="0.9">
+	<sprite x="150" sprite="Ilustracion_sin_titulo-1" y="200" scale="1.3" name="bg"/>
+	<gf x="1000" scroll="1" y="280"/>
+	<dad x="300" y="360"/>
+	<boyfriend x="1113.5" y="264"/>
+	<sprite x="-200" scroll="1" sprite="Ilustracion_sin_titulo-2" y="200" scale="1.1" name="wall"/>
+	<sprite x="-487.75" scroll="1" sprite="light" y="80" scale="1" name="light"/>
+	<sprite x="190.75" y="206" sprite="Ilustracion_sin_titulo-3" scale="1.3" name="idkShit"/>
+	<sprite x="-357.75" y="60" sprite="188_sin_titulo11_20230523094718" name="idkShit2"/>
+	<combo x="917.25" y="522.75"/>
+</stage>

@@ -1,0 +1,16 @@
+{
+	"opponentModeAllowed": true,
+	"coopAllowed": false,
+	"stepsPerBeat": 4,
+	"beatsPerMesure": 4,
+	"bpm": 185,
+	"difficulties": [
+		"NORMAL"
+	],
+	"needsVoices": true,
+	"parsedColor": -5070849,
+	"displayName": "What-Am-I",
+	"icon": "Pibby Apocalypse/finn",
+	"name": "What-Am-I",
+	"color": "#B29FFF"
+}

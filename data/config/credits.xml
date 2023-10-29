@@ -1,0 +1,14 @@
+<!DOCTYPE codename-mod-credits>
+<!-- THE CREDITS TO ORIGINAL CREATOR OF THE MOD -->
+
+<menu name="The FunkinPibby Team" desc="Pibby Apocalypse creators' team credits.(play the original you dumbshit >:[ )">
+	<credit name="GameBanana pages" desc="too lazy to put them one by one" icon="" size="130" url="https://gamebanana.com/wips/73842"/>
+	<credit name="GameJolt pages" desc="too lazy to put them one by one" icon="" size="130" url="https://gamejolt.com/games/Pibby/786001"/>
+	<credit name="Twitter" desc="too lazy to put them one by one" icon="" size="130" url="https://twitter.com/FunkinPibby"/>
+</menu>
+
+<!-- PORTERS -->
+
+<menu name="Porters" desc="The ones who ported the mods.">
+	<credit name="NotBeep-,-" desc="ported the entire mod by himself." icon="" size="130" url="https://www.youtube.com/channel/UCRAhU1SMt_Qz0ByM6ZM8GcA"/>
+</menu>

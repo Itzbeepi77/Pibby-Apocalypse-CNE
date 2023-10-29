@@ -1,0 +1,69 @@
+{
+    "chars": [
+        {
+            "name": "bf",
+            "isOpponent": false,
+            "forSongs": [{"songName": "Geometrical Dominator"}]
+        },
+        {
+            "name": "finn-sword",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
+            "name": "finn-sword",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Mindless"}]
+        },
+        {
+            "name": "finn-R",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Mindless"}]
+        },
+        {
+            "name": "finn-slash",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Mindless"}]
+        },
+        {
+            "name": "finn-sword",
+            "isOpponent": true,
+            "forSongs": [{"songName": "What-Am-I"}]
+        },
+        {
+            "name": "finn-slash",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
+            "name": "finncawm_start_new",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        },
+        {
+            "name": "finnanimstuff",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        },
+        {
+            "name": "finncawm_reveal",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        },
+        {
+            "name": "finn-sword-shad",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        },
+        {
+            "name": "finncawm",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        },
+        {
+            "name": "bfcawm",
+            "isOpponent": false,
+            "forSongs": [{"songName": "Come-Along-With-Me"}]
+        }
+    ]
+}

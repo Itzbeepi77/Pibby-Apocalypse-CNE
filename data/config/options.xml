@@ -1,0 +1,7 @@
+<!DOCTYPE codename-mod-options>
+<menu name="PibbyApocalypse" desc="Port Options">
+	<checkbox id="shaderShit" desc="Disables shaders in the port." name="Disable shaders" />
+	<checkbox id="hudShit" desc="Enables hudStyle in the port." name="Enable hudStyle" />
+	<number id="hudStyle" name="hudStyle Number" min="0" max="1" change="1" desc="choose the hudStyle you want, 0 is default"/>
+	<checkbox id="ratingHUD" desc="Enables ratings in HUD." name="Enables ratings in HUD" />
+</menu>

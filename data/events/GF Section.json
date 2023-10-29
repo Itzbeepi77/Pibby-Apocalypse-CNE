@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "StrumLine",
+            "type": "StrumLine",
+            "defaultValue": 0
+        },
+        {
+            "name": "Turn On GF Sections?",
+            "type": "Bool",
+            "defaultValue": false
+        }
+    ]
+}

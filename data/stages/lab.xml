@@ -1,0 +1,12 @@
+<!DOCTYPE codename-engine-stage>
+<stage folder="stages/PibbyApocalypse/images/lab/" name="lab" zoom="1.1">
+	<sprite x="900" scroll="1" sprite="bg" y="525" scale="1.6" name="bg"/>
+	<gf x="2010" scroll="1" y="600"/>
+	<dad x="970.5" y="646"/>
+	<boyfriend x="2100" y="630"/>
+	<sprite x="900" scroll="1" sprite="dark" y="525" scale="1.6" name="dark"/>
+	<sprite x="900" scroll="1" sprite="light" y="525" scale="1.6" name="light"/>
+	<sprite x="354.5" scroll="1" sprite="bulb" y="685" scale="1.6" name="bulb"/>
+	<sprite x="0" scroll="0" sprite="Finn_Transformation" y="0" scale="1" name="Finntransform"/>
+	<combo x="1686" y="862"/>
+</stage>
