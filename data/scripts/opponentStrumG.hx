@@ -4,6 +4,8 @@ import funkin.backend.scripting.events.NoteHitEvent;
 public var glitchNotesForBF = true;
 public var glitchNotesForDad = true;
 var glitches = new CustomShader("individualGlitches Missingno");
+//var random = FlxG.random.float(2.5, 5);
+//var random2 = FlxG.random.float(3, 7);
 /**
  * UI
  */
@@ -18,17 +20,11 @@ function onStrumCreation(event) {
 	strum.shader = glitches;
 	}
 }
-function onSongStart(){
-	switch(curSong){
-		case "come-along-with-me" | "forgotten-world":
-			glitches.binaryIntensity = 1;
-	}
-}
 function update(){
 	switch(curSong){
 		default :
-		if (curBeat % 1 == 0 && !FlxG.save.data.shaderShit){
-			tweenchrom = FlxTween.num(10, 2, 0.025, {ease: FlxEase.sineInOut}, function(val:Float) {
+		if (!FlxG.save.data.shaderShit){
+			tweenchrom = FlxTween.num(5, 2.5, 0.05, {ease: FlxEase.sineInOut}, function(val:Float) {
 				glitches.binaryIntensity = val;
 			});
 		}

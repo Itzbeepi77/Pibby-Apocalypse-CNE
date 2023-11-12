@@ -1,0 +1,19 @@
+{
+    "params": [
+        {
+            "name": "Offset blackBox down",
+            "type": "Float(0.1, 900, 0.01)",
+            "defaultValue": "900"
+        },
+        {
+            "name": "Offset blackBox up",
+            "type": "Float(0.1, 1000, 0.01)",
+            "defaultValue": "1000"
+        },
+		{
+            "name": "Speed",
+            "type": "String",
+            "defaultValue": "1"
+        }
+    ]
+}

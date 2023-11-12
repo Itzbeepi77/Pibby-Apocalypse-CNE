@@ -1,3 +1,3 @@
 function create() {
-    window.title = "CodenameEngine: PibbyApocalypse - Options";
+    window.title = "Pibby: Apocalypse - Options";
 }

@@ -22,15 +22,18 @@ function postCreate()
     var json = Json.parse(FileSystem.exists("mods/" + ModsFolder.currentModFolder + "/data/PreloadChars.json") ? File.getContent("mods/" + ModsFolder.currentModFolder + "/data/PreloadChars.json") : '{}');
     var oldBF = boyfriend.curCharacter;
     var oldDad = dad.curCharacter;
+    var oldGF = gf.curCharacter;
+
 
     for (char in json.chars) {
         for (song in char.forSongs) {
-            if (song.songName == state.SONG.meta.name) changeCharacter(char.isOpponent ? "dad": "bf", char.name, true);
+            if (song.songName == state.SONG.meta.name) changeCharacter(char.isOpponent ? "dad" : "bf", char.name, true);
         }
     }
 
     changeCharacter("bf", oldBF, false);
     changeCharacter("dad", oldDad, false);
+    changeCharacter("gf", oldGF, false);
 }
 
 function onEvent(e:EventGameEvent)
@@ -73,6 +76,21 @@ function changeCharacter(oldchar, newchar, forPreloading)
             if (forPreloading)
             {
                 graphic = dad.graphic;
+                graphic.useCount++;
+                graphic.destroyOnNoUse = false;
+                graphicCache.cachedGraphics.push(graphic);
+                graphicCache.nonRenderedCachedGraphics.push(graphic);
+            }
+            
+        case "gf":
+            thechar = gf;
+            state.remove(gf);
+            gf = null;
+            gf = new Character(thechar.x, thechar.y, newchar, thechar.isPlayer, true);
+            state.add(gf);
+            if (forPreloading)
+            {
+                graphic = gf.graphic;
                 graphic.useCount++;
                 graphic.destroyOnNoUse = false;
                 graphicCache.cachedGraphics.push(graphic);

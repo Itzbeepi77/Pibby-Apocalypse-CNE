@@ -1,4 +1,4 @@
-var preloadedCharacters = [];
+var preloadedCharacters = ["pibby-angy"];
 
 function postCreate() {
 	for (event in events) {

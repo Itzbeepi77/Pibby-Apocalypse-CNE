@@ -1,7 +1,7 @@
 <!DOCTYPE codename-engine-stage>
 <stage zoom="1.5" name="void" folder="stages/PibbyApocalypse/images/void/">
 
-	<sprite name="bg" x="0" y="-200" sprite="Ilustracion_sin_titulo-1" scroll="0.6" scale="2.5"/>
+	<sprite name="bg" x="0" y="-200" sprite="void" scroll="0.6" scale="2.5"/>
 	
 	<sprite name="glitch" x="100" y="-100" sprite="gumballglitchbg" scroll="1" scale="5" alpha="0.0001"/>
 

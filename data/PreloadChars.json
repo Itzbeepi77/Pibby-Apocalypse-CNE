@@ -6,6 +6,16 @@
             "forSongs": [{"songName": "Geometrical Dominator"}]
         },
         {
+            "name": "newbf",
+            "isOpponent": false,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
+            "name": "bfsword",
+            "isOpponent": false,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
             "name": "finn-sword",
             "isOpponent": true,
             "forSongs": [{"songName": "Suffering-Siblings"}]
@@ -32,6 +42,16 @@
         },
         {
             "name": "finn-slash",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
+            "name": "finn-hurt",
+            "isOpponent": true,
+            "forSongs": [{"songName": "Suffering-Siblings"}]
+        },
+        {
+            "name": "pibby-angy",
             "isOpponent": true,
             "forSongs": [{"songName": "Suffering-Siblings"}]
         },

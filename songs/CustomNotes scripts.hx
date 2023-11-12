@@ -1,5 +1,7 @@
 // for noteType stuff
 // NO TOUCHIES MAFAKA >:(
+import StringTools;
+
 public var singDir = ["LEFT", "DOWN", "UP", "RIGHT"];
 function onNoteHit(note){
 
@@ -8,10 +10,6 @@ function onNoteHit(note){
     //if (!PlayState.opponentMode) {
 
     switch(curNotes) {
-
-    case "GF Sing":
-        gf.playAnim("sing" + singDir[note.direction], true);
-        note.cancelAnim();
             
     case "Second Char Sing":
         strumLines.members[3].characters[0].playAnim("sing" + singDir[note.direction], true);
@@ -37,33 +35,36 @@ function onNoteHit(note){
         trace("HI :]");
     }
 }
-function onPlayerHit(e){
-    
+function onNoteCreation(e) {
     var curNotes = e.noteType;
+    var note = e.note;
 
-    switch(curNotes) {
-    
-    case null:
-        if (curSong == 'retcon' && e.mustHit && !PlayState.opponentMode){healthBar.createFilledBar(colouredBar, colouredBarB);}// changing healthColors
-
-    case "GF Sing":
-        gf.playAnim("sing" + singDir[e.direction], true);
-        e.cancelAnim();
-        if (curSong == 'retcon' && e.mustHit && !PlayState.opponentMode){healthBar.createFilledBar(colouredBar, colouredBarG);}// changing healthColors
+    switch (curNotes) {
+        case "Glitch Note", "Second Char Glitch":// ye
+        if (!FlxG.save.data.shaderShit){
+            note.shader = glitches2;
+        }
     }
 }
-function onDadHit(e){
-    
-    var curNotes = e.noteType;
-
-    switch(curNotes) {
-    
-    case null:
-        if (curSong == 'retcon' && e.mustHit && PlayState.opponentMode){healthBar.createFilledBar(colouredBar, colouredBarB);}// changing healthColors
-
-    case "GF Sing":
-        gf.playAnim("sing" + singDir[e.direction], true);
-        e.cancelAnim();
-        if (curSong == 'retcon' && e.mustHit && PlayState.opponentMode){healthBar.createFilledBar(colouredBar, colouredBarG);}// changing healthColors
-    }
+function onPlayerHit(note:NoteHitEvent) {
+    if (PlayState.opponentMode){
+    if (note.note.prevNote == null || note.note.isSustainNote) return;
+    if (note.note.prevNote.noteData == note.note.noteData) return;
+    if (note.note.prevNote.mustPress == note.note.mustPress && note.note.prevNote.strumTime == note.note.strumTime){
+    //if (note.note.strumTime == note.note.prevNote.strumTime) {
+        camera.shake(0.04, 0.02);
+        camHUD.shake(0.04, 0.1);
+        shakes();
+    }}
+}
+function onDadHit(note:NoteHitEvent) {
+    if (!PlayState.opponentMode){
+    if (note.note.prevNote == null || note.note.isSustainNote) return;
+    if (note.note.prevNote.noteData == note.note.noteData) return;
+    if (note.note.prevNote.mustPress == note.note.mustPress && note.note.prevNote.strumTime == note.note.strumTime){
+    //if (note.note.strumTime == note.note.prevNote.strumTime) {
+        camera.shake(0.04, 0.02);
+        camHUD.shake(0.04, 0.1);
+        shakes();
+    }}
 }

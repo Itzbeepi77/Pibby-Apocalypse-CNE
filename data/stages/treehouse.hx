@@ -11,12 +11,6 @@ function create(){
     vignette.alpha = 0.0001;
     add(vignette);
 
-    vignette2 = new FlxSprite(0, 0).loadGraphic(Paths.image('gradient'));
-    vignette2.updateHitbox();
-    vignette2.cameras = [camHUD];
-    vignette2.alpha = 0.0001;
-    add(vignette2);
-
 }
 function stepHit(curStep:Int)
     {
@@ -48,6 +42,7 @@ function stepHit(curStep:Int)
 
         if (curStep == 630)
         {
+            camHUD.flash();
             vignette.alpha = 1;
 
             bgHeaven.alpha = 0.0001;
@@ -64,6 +59,7 @@ function stepHit(curStep:Int)
         }
         if (curStep == 896) {
 
+            camHUD.flash();
             bgGlitch.alpha = 0.0001;
             lightG.alpha = 0.0001;
             hill.alpha = 0.0001;
@@ -79,6 +75,7 @@ function stepHit(curStep:Int)
         }
         if (curStep == 1664) {
 
+            camHUD.flash();
             bgGlitch.alpha = 0.0001;
             lightG.alpha = 0.0001;
             hill.alpha = 0.0001;
@@ -93,7 +90,6 @@ function stepHit(curStep:Int)
         }
         if (curStep == 1754){
             FlxTween.tween(camGame, {alpha: 0}, 1, {ease: FlxEase.quadInOut});
-            //FlxTween.tween(vignette2, {alpha: 1}, 0.5, {ease: FlxEase.quadInOut}); nuh uh
         }
     }
 }

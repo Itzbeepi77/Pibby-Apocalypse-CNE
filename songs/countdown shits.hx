@@ -1,7 +1,3 @@
-function onStartCountdown(){
-    Conductor.songPosition = PlayState.startTime - Conductor.crochet * 6;
-    startTimer = Conductor.crochet * 1.2 / 1000;
-}
 function onCountdown(event) {// countdown thingy
     switch(curSong){
         case 'suffering-siblings', 'brotherly-love', 'blessed-by-swords', 'what-am-i':
@@ -11,7 +7,7 @@ function onCountdown(event) {// countdown thingy
                     bfIntro.playAnim('3', true);
                     pibbyIntro.playAnim('3', true); 
                     boyfriend.alpha = 0.0001; 
-                    bfIntro.visible = true; 
+                    bfIntro.alpha = 1; 
                     pibbyIntro.alpha = 1; 
                     gf.alpha = 0.0001;
                     countNum.animation.play('3', true);
@@ -30,7 +26,7 @@ function onCountdown(event) {// countdown thingy
                     countNum.animation.play('1', true);
 
                 case 3: 
-                    camera.zoom = defaultCamZoom; // for zoom back to their default camZoom
+                    FlxTween.tween(camera, {zoom: defaultCamZoom}, 0.05); // for zoom back to their default camZoom
                     bfIntro.playAnim('idle', true); 
                     pibbyIntro.playAnim('idle', true); 
                     camHUD.visible = true; 
@@ -38,13 +34,13 @@ function onCountdown(event) {// countdown thingy
                     countNum.animation.play('Go', true);
             };
         
-        case 'retcon', 'my-amazing-world', 'childs-play':
+        case 'retcon', 'childs-play':
             switch(event.swagCounter) {
                 case 0:
                         camera.zoom += 0.03;
                         bfIntro.playAnim('3', true);
                         boyfriend.alpha = 0.0001; 
-                        bfIntro.visible = true; 
+                        bfIntro.alpha = 1; 
                         countNum.animation.play('3', true);
                         countNum.alpha = 1;
     
@@ -86,10 +82,15 @@ function onCountdown(event) {// countdown thingy
 function update(elapsed:Float) {
 
     switch(curSong){
-        case 'suffering-siblings', 'brotherly-love', 'blessed-by-swords', 'what-am-i', 'retcon', 'my-amazing-world', 'childs-play':
+        case 'suffering-siblings', 'brotherly-love', 'blessed-by-swords', 'what-am-i', 'retcon', 'childs-play':
         if (Conductor.songPosition < 0) {
             curCameraTarget = 1;
             camFollow.setPosition(2100, 1100);
         }
+    }
+}
+function postCreate(){
+    if (Conductor.songPosition < 0) {
+    trace("Countdown Shits");
     }
 }

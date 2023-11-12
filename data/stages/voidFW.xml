@@ -1,44 +1,22 @@
 <!DOCTYPE codename-engine-stage>
-<stage zoom="0.7" name="voidFW" folder="stages/PibbyApocalypse/images/voidFW/">
-
-	<sprite name="bg" x="0" y="-200" sprite="Ilustracion_sin_titulo-1" scroll="0.6" scale="2.5"/>
-	
-	<high-memory>
-
-	<sprite name="rock" x="100" y="200" sprite="Ilustracion_sin_titulo-5" scroll="1.1" scale="2.5"/>
-	<sprite name="rock2" x="0" y="-200" sprite="Ilustracion_sin_titulo-6" scroll="0.9" scale="2.5"/>
-	<sprite name="rock3" x="0" y="-200" sprite="Ilustracion_sin_titulo-7" scroll="0.85" scale="2.5"/>
-
-	</high-memory>
-
-	<sprite name="house" x="0" y="-100" sprite="Ilustracion_sin_titulo-3" scroll="0.85" scale="2.5"/>
-	<sprite name="platform" x="0" y="-150" sprite="Ilustracion_sin_titulo-4" scroll="1" scale="2.5"/>
-
-	<high-memory>
-	<sprite name="things" x="0" y="-200" sprite="Ilustracion_sin_titulo-8" scroll="1" scale="2.5"/>
-	</high-memory>
-	
-	<sprite name="bgb" x="0" y="-200" sprite="1b" scroll="0.6" scale="1.6" alpha="0.0001"/>
-	<sprite name="houseb" x="-600" y="-200" sprite="3b" scroll="0.85" scale="1.2" alpha="0.0001"/>
-	
-	<high-memory>
-	<sprite name="uhh2" x="-800" y="-400" sprite="2b" scroll="0.6" scale="1.2" alpha="0.0001"/>
-	<sprite name="rockb" x="-400" y="100" sprite="11" scroll="1.1" scale="1.2" alpha="0.0001"/>
-	<sprite name="rock4b" x="0" y="-200" sprite="4" scroll="0.85" scale="1.2" alpha="0.0001"/>
-	</high-memory>
-
-	<sprite name="platform2" x="-5000" y="-200" sprite="5b" scroll="1" scale="1.2" alpha="0.0001"/>
-
-	<high-memory>
-	<sprite name="thingsb" x="-200" y="-300" sprite="6" scroll="1" scale="1.2"/>
-	</high-memory>
-
-	<gf x="935" y="55" scroll="1"/>
+<stage folder="stages/PibbyApocalypse/images/voidFW/" name="voidFW" zoom="0.7">
+	<sprite x="0" scroll="0.6" sprite="void" y="-200" scale="2.5" name="bg"/>
+	<sprite x="-42.575" scroll="1.1" sprite="Ilustracion_sin_titulo-5" y="-34.25" scale="2.5" name="rock"/>
+	<sprite x="0" scroll="0.9" sprite="Ilustracion_sin_titulo-6" y="-200" scale="2.5" name="rock2"/>
+	<sprite x="0" scroll="0.85" sprite="Ilustracion_sin_titulo-7" y="-200" scale="2.5" name="rock3"/>
+	<sprite x="0" scroll="0.85" sprite="Ilustracion_sin_titulo-3" y="-100" scale="2.5" name="house"/>
+	<sprite x="0" scroll="1" sprite="Ilustracion_sin_titulo-4" y="-150" scale="2.5" name="platform"/>
+	<sprite x="0" scroll="0.6" sprite="1b" y="-200" alpha="0.0001" scale="1.6" name="bgb"/>
+	<sprite x="-600" scroll="0.85" sprite="3b" y="-200" alpha="0.0001" scale="1.2" name="houseb"/>
+	<sprite x="-800" scroll="0.6" sprite="2b" y="-400" alpha="0.0001" scale="1.2" name="uhh2"/>
+	<sprite x="-400" scroll="1.1" sprite="11" y="100" alpha="0.0001" scale="1.2" name="rockb"/>
+	<sprite x="0" scroll="0.85" sprite="4" y="-200" alpha="0.0001" scale="1.2" name="rock4b"/>
+	<sprite x="-614.5" y="-470.5" sprite="5b" alpha="0.0001" scale="1.2" name="platform2"/>
+	<gf x="935" scroll="1" y="55"/>
 	<dad x="150" y="100"/>
 	<boyfriend x="935" y="100"/>
-
-	<high-memory>
-	<sprite name="uhh3" x="-600" y="-200" sprite="2b" scroll="0.85" scale="1.2" alpha="0.0001"/>
-	</high-memory>
-
+	<sprite x="-600" scroll="0.85" sprite="2b" y="-200" alpha="0.0001" scale="1.2" name="uhh3"/>
+	<sprite x="0" scroll="1" sprite="Ilustracion_sin_titulo-8" y="-200" scale="2.5" name="things"/>
+	<sprite x="-3.5" sprite="Ilustracion_sin_titulo-8" y="-199.5" scale="2.5" alpha="0.0001" name="thingsb"/>
+	<combo/>
 </stage>

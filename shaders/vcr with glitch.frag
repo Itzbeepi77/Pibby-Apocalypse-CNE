@@ -2,7 +2,7 @@
 
     uniform float iTime;
    // uniform sampler2D noiseTex;
-    uniform vec3 iResolution;
+   // uniform vec3 iResolution;
 
     float onOff(float a, float b, float c)
     {

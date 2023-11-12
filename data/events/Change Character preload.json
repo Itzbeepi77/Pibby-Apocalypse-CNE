@@ -1,8 +1,8 @@
 {
     "params": [
         {
-            "name": "Character (bf/dad)",
-            "type": "DropDown('dad', 'bf')",
+            "name": "Character (bf/dad/gf)",
+            "type": "DropDown('dad', 'bf', 'gf')",
             "defaultValue": "dad"
         },
         {

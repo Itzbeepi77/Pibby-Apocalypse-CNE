@@ -1,12 +1,18 @@
 import openfl.geom.ColorTransform;
+var velocityShitHehe = 1;
 
-var whiteBG = new FlxSprite();
+// making them variables so its less confusing and stuff also stolen code :trolled:
+var charColors = [0xff969494, 0xFFBFE5BA];
+var houseColors = [0xFF8f8f8f, 0xFF9ADA91];
+var rockColors = [0xFFbababa, 0xFFB8D4B5];
+var coolThingColors = [0xFFc4c0c0, 0xFFC1CEAA];
+
 var centerCams:Bool = false;
 public var lowMem = Options.lowMemoryMode;
 //var vhs = new CustomShader("MAWVHS"); it crashed ._.
 
 function create(){
-    gf.alpha = 0.0001;
+    gf.visible = false;
 
     //strumLines.members[2].visible = false;
 
@@ -19,12 +25,6 @@ function create(){
     rock2.alpha = 0.0001;
     things.alpha = 0.0001;
     }
-
-	whiteBG.makeGraphic(6000, 6000, FlxColor.WHITE);
-	whiteBG.x = "-490";
-	whiteBG.y = "-490";
-    whiteBG.alpha = 0.0001;
-	insert(1, whiteBG);
 
     tweenLoopAngle(house, 4, -4, 6, 6);
     tweenLoopAngle(platform, -0.5, 0.5, 2.5, 2.5);
@@ -53,17 +53,12 @@ function tweenLoopAngle(varx, distance1, distance2, duration1, duration2) {
             }
     });
 }
-function badApple(turn:String){
-    if (turn == "on"){
-        whiteBG.alpha = 1;
-        boyfriend.color = 0x0000000;
-        dad.color = 0x0000000;
-        iconP1.color = 0x0000000;
-        iconP2.color = 0x0000000;
-        gf.color = 0x0000000;
-
+function onEvent(e){
+    if (e.event.name == "AppleFilter"){
+    if (e.event.params[0] == true || e.event.params[0] == null){
         bg.alpha = 0.0001;
         if (!lowMem){
+        penny.alpha = 0.0001;
         topgoop.alpha = 0.0001;
         droplet.alpha = 0.0001;
         topgoop2.alpha = 0.0001;
@@ -74,15 +69,10 @@ function badApple(turn:String){
         idkShit.alpha = 0.0001;
         idkShit2.alpha = 0.0001;
         }
-    }
-    if (turn == "off"){
-        whiteBG.alpha = 0.0001;
-        boyfriend.color = 0xFFFFFFF;
-        dad.color = 0xFFFFFFF;
-        iconP1.color = 0xFFFFFFF;
-        iconP2.color = 0xFFFFFFF;
-        gf.color = 0xFFFFFFF;
-    }
+    }}
+}
+function onSongStart(){
+    camZooming = true;
 }
 function postUpdate() {
     if (centerCams){
@@ -93,16 +83,15 @@ function postUpdate() {
 function stepHit(){
     if (curSong == 'my-amazing-world'){
     if (curStep == 512 || curStep == 1568){
-        badApple("on");
         camHUD.flash();
     }
     if (curStep == 2144){
-        badApple("off");
         camHUD.flash();
     }
     if (curStep == 1024 || curStep == 1824){
         bg.alpha = 1;
         if (!lowMem){
+        penny.alpha = 1;
         sinkgoop.alpha = 1;
         topgoop.alpha = 1;
         droplet.alpha = 1;
@@ -115,22 +104,32 @@ function stepHit(){
         }
     }
     if (curStep == 1024 || curStep == 1824){
-        badApple("off");
     }
     if (curStep == 2080){
-        boyfriend.alpha = 0.0001;
-        badApple("on");
+        boyfriend.visible = false;
     }
     if (curStep == 1024 || curStep == 2400){
         camGame.flash(FlxColor.BLACK, 2.5);
     }
+    if (curStep == 1024){
+        camera.zoom += 1.8;
+        FlxTween.tween(camera, {zoom: 1.2}, 10);
+    }
+    if (curStep == 2400){
+        camera.zoom += 1.8;
+        FlxTween.tween(camera, {zoom: 1.2}, 5);
+    }
+    if (curStep == 2672){
+        FlxTween.tween(camera, {zoom: 2}, 1);
+    }
     if (curStep == 1568){
-        boyfriend.alpha = 0.6;
+        boyfriend.alpha = 0.5;
     }
     if (curStep == 1568 || curStep == 2688){
-        gf.alpha = 1;
+        gf.visible = true;
     }
     if (curStep == 2688){
+        boyfriend.visible = true;
         boyfriend.alpha = 1;
         bgV.alpha = 1;
         house.alpha = 1;
@@ -145,22 +144,21 @@ function stepHit(){
         ch2.alpha = 0.0001;
         ch3.alpha = 0.0001;
 
-        /*if (!FlxG.save.data.shaderShit){
-            camera.removeShader(vhs);
-            camHUD.removeShader(vhs);
-    
-            vhs.iTime = 0;
-        }*/
-        //centerCams = false;
+        boyfriend.color = charColors[0];
+        dad.color = charColors[0];
+        gf.color = charColors[0];
+        
+        house.color = houseColors[0];
+
+        things.color = coolThingColors[0];
+        platform.color = rockColors[0];
+        rock.color = houseColors[0];
+        rock2.color = houseColors[0];
     }
     if (curStep == 2144){
-        //strumLines.members[2].visible = false;
-        //strumLines.members[1].visible = true;
-        //gf.alpha = 0;
-        //boyfriend.alpha = 1;
-
         bg.alpha = 0.0001;
         if (!lowMem){
+        penny.alpha = 0.0001;
         sinkgoop.alpha = 0.0001;
         wall.alpha = 0.0001;
         light.alpha = 0.0001;
@@ -171,13 +169,6 @@ function stepHit(){
         topgoop2.alpha = 0.0001;
         droplet2.alpha = 0.0001;
         }
-
-        /*if (!FlxG.save.data.shaderShit){
-        camera.addShader(vhs);
-        camHUD.addShader(vhs);
-
-        vhs.iTime = 5;
-        }*/
 
         ch1.alpha = 1;
         centerCams = true;

@@ -1,0 +1,14 @@
+{
+    "params": [
+        {
+            "name": "CamZoomBopping",
+            "type": "Float(1, 10, 0.01)",
+            "defaultValue": "4"
+        },
+        {
+            "name": "CamZoomStrenght",
+            "type": "Float(1, 10, 0.01)",
+            "defaultValue": "1"
+        }
+    ]
+}

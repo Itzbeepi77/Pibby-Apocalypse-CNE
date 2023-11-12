@@ -1,5 +1,3 @@
 function create(){
-    FlxG.mouse.visible = true;
-
-    window.title = "CodenameEngine: PibbyApocalypse";
+    window.title = "Pibby: Apocalypse - TitleScreen";
 }

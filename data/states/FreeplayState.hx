@@ -40,16 +40,23 @@ function create() {
     bgGlitch = new FlxSprite(0, 0);
     bgGlitch.frames = Paths.getSparrowAtlas("menus/fpmenu/background");
     bgGlitch.animation.addByPrefix('idle', 'background idle', 24, true);
+    bgGlitch.scrollFactor.set();
     bgGlitch.screenCenter();
-    stageBox.scale.set(1, 1);
+    bgGlitch.scale.set(1,1);
     bgGlitch.antialiasing = true;
-    insert(members.indexOf(stageBox)-2, bgGlitch);
+    insert(members.indexOf(stageBox)-1, bgGlitch);
     bgGlitch.animation.play('idle', true);
 
-    window.title = "CodenameEngine: PibbyApocalypse - FreePlay";
+    scoreText.alpha = 0.0001;
+    coopText.y = scoreText.y + 36;
+
+    scoreBG.alpha = 0.0001;
+
 }
 
 function postCreate() {
+    diffText.destroy();
+
     freeplayText = new FlxText(490, 5, 700);
     freeplayText.setFormat("fonts/vcr.ttf", 25, FlxColor.WHITE, "CENTER");
     freeplayText.setBorderStyle(FlxTextBorderStyle.OUTLINE, FlxColor.BLACK, 2);
@@ -59,11 +66,10 @@ function postCreate() {
 
 function postUpdate() {
     // trace(songs[curSelected].name + " || " + currentWeek);
+    window.title = "Pibby: Apocalypse - FreePlay | " + songs[curSelected].name + " | " + "DIFFICULTY: " + "< " + PlayState.difficulty + " >";
 
     CoolUtil.loadAnimatedGraphic(bg, Paths.image("menus/fpmenu/stage/" + weekBg));
     freeplayText.text = "Current week: " + currentWeek;
-
-    window.title = "CodenameEngine: PibbyApocalypse - FreePlay | " + songs[curSelected].name + " | " + "DIFFICULTY: " + "< " + PlayState.difficulty + " >";
 
     switch(songs[curSelected].name) {
 

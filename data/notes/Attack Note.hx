@@ -5,6 +5,7 @@ function onNoteHit(note:NoteHitEvent){
     switch(curNotes){
         case "Attack Note":
             boyfriend.playAnim("sing" + singDir[note.direction] + "shoot", true);
+            dad.playAnim("sing" + singDir[note.direction], true);
             note.cancelAnim();
     }
 }

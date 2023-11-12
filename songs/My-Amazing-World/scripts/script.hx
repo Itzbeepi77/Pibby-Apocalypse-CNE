@@ -1,7 +1,9 @@
+import openfl.Lib;
+
 var dadCamZoom:Int = 1.2;
 var bfCamZoom:Int = 0.9;
-var vcrG = new CustomShader("vcr with glitch");
-var vhs = new CustomShader("vhs");
+var oldTV = new CustomShader("vcr with glitch");
+var vhs = new CustomShader("MAWVHS");
 function update() {
     if(curCameraTarget == 0){
         defaultCamZoom = dadCamZoom;
@@ -12,6 +14,14 @@ function update() {
     if(curCameraTarget == 2){
         defaultCamZoom = bfCamZoom;
     }
+
+    FlxTween.num(20, 10, 0.025, {ease: FlxEase.sineInOut}, function(val:Float) {
+        oldTV.iTime = val;
+    });
+    
+    FlxTween.num(1, 0, 0.05, {ease: FlxEase.sineInOut}, function(val:Float) {
+        vhs.iTime = val;
+    });
 }
 function stepHit(){
     if (curStep == 492){
@@ -45,12 +55,10 @@ function stepHit(){
     }
     if (curStep == 2144){
         if (!FlxG.save.data.shaderShit){
-        camHUD.addShader(vcrG);
-        camGame.addShader(vcrG);
-        camHUD.addShader(vhs);
-        camGame.addShader(vhs);
-        vcrG.iTime = 20;
-        vhs.iTime = 1;
+            camHUD.addShader(oldTV);
+            camera.addShader(oldTV);
+            camHUD.addShader(vhs);
+            camera.addShader(vhs);
         }
         dad.x = 0 +300;
         dad.y = 0 +310;
@@ -59,12 +67,12 @@ function stepHit(){
     }
     if (curStep == 2688){
         if (!FlxG.save.data.shaderShit){
-        camHUD.removeShader(vcrG);
-        camGame.removeShader(vcrG);
-        camHUD.removeShader(vhs);
-        camGame.removeShader(vhs);
-        vcrG.iTime = 0;
-        vhs.iTime = 0;
+            camHUD.removeShader(oldTV);
+            camera.removeShader(oldTV);
+            camHUD.removeShader(vhs);
+            camera.removeShader(vhs);
+            oldTV.iTime = 0;
+            vhs.iTime = 0;
         }
         dadCamZoom = 0.7;
         bfCamZoom = 0.7;
@@ -72,8 +80,8 @@ function stepHit(){
     }
     if (curStep == 2176)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2208)
         {
@@ -87,8 +95,8 @@ function stepHit(){
         }
     if (curStep == 2304)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2336)
         {
@@ -102,8 +110,8 @@ function stepHit(){
         }
     if (curStep == 2432)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2464)
         {
@@ -117,8 +125,8 @@ function stepHit(){
         }
     if (curStep == 2560)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2592)
         {
@@ -132,8 +140,8 @@ function stepHit(){
         }
     if (curStep == 2624)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2632)
         {
@@ -147,8 +155,8 @@ function stepHit(){
         }
     if (curStep == 2648)
         {
-            bfCamZoom = 1.1;
-            dadCamZoom = 1.1;
+            bfCamZoom = 1.2;
+            dadCamZoom = 1.2;
         }
     if (curStep == 2656)
         {

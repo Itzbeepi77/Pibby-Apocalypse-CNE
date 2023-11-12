@@ -1,5 +1,5 @@
 <!DOCTYPE codename-engine-character>
-<character x="-25" isGF="false" y="453" icon="Pibby Apocalypse/darwin" camx="0" scale="1.4" camy="0" isPlayer="true" flipX="true" sprite="PA/darwin-noremote" color="#FF9100">
+<character x="-25" isGF="false" y="453" icon="Pibby Apocalypse/darwin" camx="0" scale="1.4" camy="0" isPlayer="true" flipX="true" sprite="PA/darwin-noremote" color="#FF9100" gameOverChar="darwin-noremote">
 	<anim loop="false" x="-15" anim="Darwin down0" fps="24" y="-47" name="singDOWN"/>
 
 	<anim loop="false" x="-31" anim="Right-miss" fps="24" y="11" name="singRIGHTmiss"/>

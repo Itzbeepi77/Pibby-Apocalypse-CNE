@@ -1,16 +1,9 @@
-var disclaimer:FunkinText;
-
-function create(){
+function postCreate(){
     FlxG.mouse.visible = true;
 
-    window.title = "CodenameEngine: PibbyApocalypse - WARNING!!!";
-    
-    disclaimer = new FunkinText(16, titleAlphabet.y + titleAlphabet.height + 10, FlxG.width - 32, "", 32);
-    disclaimer.alignment = CENTER;
-    disclaimer.applyMarkup("This modpack has some *uncomfortalbe stuff* you can turn it off inside options menu or don't play this mod.",
-        [
-            new FlxTextFormatMarkerPair(new FlxTextFormat(0xFFFF4444), "*")
-        ]
-    );
-    add(disclaimer);
+    window.title = "Pibby: Apocalypse - WARNING!!!";
+
+    titleAlphabet.y = disclaimer.y - 120;
+    disclaimer.screenCenter();
+    disclaimer.text = "This engine is still in a alpha state. That means majority of the features are either buggy or unfinished. If you find any bugs, please report them to the Codename Engine GitHub.\n\nAlso, this port has some stuff that can be sensitive to some people. Such as gore, flashing, etc.\nthere's a setting of it on the menu options.\n\n\nPress ENTER to continue.";
 }

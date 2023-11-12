@@ -21,11 +21,6 @@ function update() {
         strumLines.members[3].members[i].alpha = 1;
         }*/
     }
-    if (curStep == 2080){
-        curCameraTarget = -1;
-        defaultCamZoom = 0.6;
-        camFollow.x = 1700;
-    }
 }
 function create(){
     remove(strumLines.members[0].characters[0]);
